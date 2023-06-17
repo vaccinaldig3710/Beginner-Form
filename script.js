@@ -1,5 +1,7 @@
+// Initialize function when window loads
 window.onload = function() {
 
+    // Get DOM elements
     let create = document.getElementById('create');
     let form = document.getElementById('myform');
 
@@ -17,16 +19,17 @@ window.onload = function() {
     let passwordReq = document.getElementById('pass-req')
     let conPassReq = document.getElementById('cpass-req');
 
+    // Regular expressions for validation
     let emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
     let passwordRegex = /^(?=.*[A-Z]).{5,}$/;
 
-
-
+    // Prevent form submission by default
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // This prevents the form from submitting
-        console.log('Form submitted!'); // This will log 'Form submitted!' to the console when the form is submitted
+        event.preventDefault(); 
+        console.log('Form submitted!'); 
     });
 
+    // Format phone input
     phone.addEventListener('blur', function(event) {
         let val = event.target.value.replace(/\D/g, '');
     
@@ -41,12 +44,15 @@ window.onload = function() {
         }
     });
 
+    // Form validation on create button click
     create.addEventListener('click', function(event) {
 
         event.preventDefault();
 
+        // Default validation status
         let isValid = true;
 
+        // Check name inputs
         if (fname.value === '' || lname.value === '') {
             fnameReq.style.display = 'block';
             lnameReq.style.display = 'block';
@@ -55,8 +61,7 @@ window.onload = function() {
             lnameReq.style.display = 'none';
         }
 
-        
-
+        // Check email and phone inputs
         if (email.value === '' && phone.value === '') {
             emailReq.style.display = 'block';
             phoneReq.style.display = 'block';
@@ -69,6 +74,7 @@ window.onload = function() {
             phoneReq.style.display = 'none';
         }
 
+        // Check password inputs
         if (password.value !== conPass.value) {
             conPassReq.style.display = 'block';
             isValid = false;
@@ -77,15 +83,14 @@ window.onload = function() {
                 passwordReq.style.display = "block";
                 isValid = false;
                 } else {
-                    passwordReq.style.display = "none"
+                    passwordReq.style.display = "none";
+                    conPassReq.style.display = "none";
                 }
         }
-        if (!isValid) {
-            event.preventDefault();
-        }
+
+        // Show success message if valid
         if (isValid) {
-            console.log("Form Submitted")
+            alert('Success!');
         }
     });
-    console.log("Hello World!")
 }

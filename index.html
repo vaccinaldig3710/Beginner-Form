@@ -1,64 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Metadata for the webpage -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking the stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Linking the script -->
     <script type="text/javascript" src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
+    <!-- Sidebar with image -->
     <div class="side-bar">
         <img class="image" src="photo-1585202900225-6d3ac20a6962.webp">
     </div>
+    <!-- Main content -->
     <div class="content">
+        <!-- Header with introduction text -->
         <div class="header">
             <p class="p">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
             <p class="p">You know you want to.</p>
         </div>
+        <!-- Form for user input -->
         <div class="form-content">
             <form id="myform">
+                <!-- Header for form -->
                 <p class="lets">Let's do this!</p>
+                <!-- Input row for first and last name -->
                 <div class="input-row">
+                    <!-- First name input -->
                     <div class="inputs">
                         <label for="fname">First Name:</label>
                         <input type="text" id="fname" name="fname" required>
                         <p id="fname-req" class="req">Required</p>
                     </div>
+                    <!-- Last name input -->
                     <div class="inputs">
                         <label for="lname">Last Name:</label>
                         <input type="text" id="lname" name="lname" required>
                         <p id="lname-req" class="req">Required</p>
                     </div>
                 </div>
-
+                <!-- Input row for email and phone -->
                 <div class="input-row">
+                    <!-- Email input -->
                     <div class="inputs">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email">
                         <p id="email-req" class="req">Required: Enter an email or phone number</p>
                     </div>
+                    <!-- Phone input -->
                     <div class="inputs">
                         <label for="phone">Phone Number</label>
                         <input type="tel" id="phone" name="phone">
                         <p id="phone-req" class="req">Required: Enter an email or phone number</p>
                     </div>
                 </div>
-
+                <!-- Input row for password and confirm password -->
                 <div class="input-row">
+                    <!-- Password input -->
                     <div class="inputs">
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" required>
                         <p id="pass-req" class="req">Required</p>
                     </div>
+                    <!-- Confirm password input -->
                     <div class="inputs">
                         <label for="con-pass">Confirm Password</label>
                         <input type="password" id="con-pass" name="con-pass" required>
                         <p id="cpass-req" class="req">Passwords must match</p>
                     </div>
                 </div>
-                
+                <!-- Password requirements list -->
                 <div class="pw-mins">
                     <ul>
                         <li>Must have 5 or more characters</li>
@@ -68,6 +83,7 @@
                 </div>
             </form>
         </div>
+        <!-- Footer with create account button and login link -->
         <div class="footer">
             <button id="create" class="create">Create Account</button>
             <p>Already have an account? <a class="login" href="url">Log in</a></p>
@@ -76,6 +92,7 @@
 
     </div>
 
+    <!-- Script for form validation -->
     <script type="text/javascript" src="script.js"></script>
 
 </body>

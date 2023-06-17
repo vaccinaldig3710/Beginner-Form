@@ -1,3 +1,4 @@
+/* Basic setup for the whole webpage */
 body {
     display: flex;
     background-size: cover;
@@ -7,26 +8,31 @@ body {
     background-color: lightgray;
     height: 100%;
 }
+/* Styling for main content */
 .content {
     display: flex; 
     flex-direction: column;
     width: 100%;
     height: 100%;
 }
+/* Styling for side-bar */
 .side-bar {
     margin: 0px;
     height: 100vh;
 }
 
+/* Styling for image in side-bar */
 .image {
     width: 30vw;
     height: 100vh;
     object-fit: cover;
 }
+/* Styling for form header */
 .lets {
     font-size: 30px;
 }
 
+/* Styling for form content */
 .form-content {
     display: flex;
     width: 100%;
@@ -36,6 +42,7 @@ body {
     padding-left: 40px;
     padding-bottom: 40px;
 }
+/* Styling for form inputs */
 .inputs {
     width: 20em;
     display: inline-block;
@@ -44,9 +51,11 @@ body {
     padding: 10px;
     margin-right: 10px;
 }
+/* Styling for labels */
 label {
     display: block;
 }
+/* Styling for input fields */
 input {
     height: 2.5vh;
     min-width: 150px;
@@ -56,19 +65,23 @@ input {
     position: relative;
     margin-right: 10px;
 }
+/* Styling for input rows */
 .input-row {
     display: flex;
     justify-content: space-between;
 }
+/* Styling for introductory paragraphs */
 .p {
     font-size: 2em;
     margin-left: 40px;
     width: 80%;
 }
+/* Styling for footer */
 .footer {
     margin-top: 40px;
     margin-left: 40px;
 }
+/* Styling for create account button */
 .create {
     background-color: green;
     color: white;
@@ -76,6 +89,7 @@ input {
     border-radius: 10px;
 }
 
+/* Styling for required field notices */
 .req {
     display: none;
     color: red;
@@ -85,6 +99,7 @@ input {
     font-size: 12px;
     bottom: -18px;
 }
+/* Responsive styling for smaller screens */
 @media (max-width: 600px) {
     .p {
         font-size: 1.5em;
